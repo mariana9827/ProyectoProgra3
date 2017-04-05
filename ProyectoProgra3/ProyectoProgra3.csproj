@@ -80,6 +80,7 @@
   <ItemGroup>
     <Compile Include="Adaptador\clsConexion.cs" />
     <Compile Include="CapaEntidad\clsEstudiante.cs" />
+    <Compile Include="ControladoraBD\clsEstudiante.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -88,7 +89,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="CapaVista\" />
-    <Folder Include="ControladoraBD\" />
     <Folder Include="Controladora\" />
     <Folder Include="Models\" />
   </ItemGroup>
