@@ -13,7 +13,7 @@ namespace ProyectoProgra3.ControladoraBD
         {
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "INSERT INTO dbo.Estudiante(Carnet,IDDireccion,IDTipoCorreo,Nombre,Apellido1,Apellido2,Cedula)VALUES(@Carnet,@IDDireccion,@Nombre,@Apellido1,@Apellido2,@Cedula)";
+            command.CommandText = "INSERT INTO dbo.Estudiante(Carnet,IDDireccion,IDTipoCorreo,Nombre,Apellido1,Apellido2,Cedula)VALUES(@Carnet,@IDDireccionS,@Nombre,@Apellido1,@Apellido2,@Cedula)";
             command.Parameters.Add("@Carnet", SqlDbType.Int).Value = Estudiante.propCarnet;
             command.Parameters.Add("@IDDireccion", ) =;
            
