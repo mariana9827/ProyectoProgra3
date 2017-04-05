@@ -10,7 +10,7 @@ namespace ProyectoProgra3.Adaptador
     public class clsConexion
     {
 
-        private SqlConnection oCN = new SqlConnection("Server=tcp:proyect3.database.windows.net,1433;Initial Catalog=ProyectoProgra;Persist Security Info=False;User ID={Admin123};Password={Mariana9827};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+        private SqlConnection oCN = new SqlConnection("Data Source=DESKTOP-JJF4ANO\\SQLEXPRESS; Initial Catalog=ProyectoProgra3; Integrated Security=True"");
             public bool abrirConexion ()
             {
                 try
