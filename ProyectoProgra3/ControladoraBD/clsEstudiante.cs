@@ -13,13 +13,20 @@ namespace ProyectoProgra3.ControladoraBD
         {
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "INSERT INTO dbo.Estudiante(Carnet,IDDireccion,IDTipoCorreo,Nombre,Apellido1,Apellido2,Cedula)VALUES(@Carnet,@IDDireccionS,@Nombre,@Apellido1,@Apellido2,@Cedula)";
+            command.CommandText = "INSERT INTO dbo.Estudiante (Carnet,Nombre,Apellido1,Apellido2,FechaNaci,Edad,Id_Persona,IDCarrera)VALUES(@Carnet,@Nombre,@Apellido1,@Apellido2,@FechaNaci,@Edad,@Id_Persona,@IDCarrera)";
             command.Parameters.Add("@Carnet", SqlDbType.Int).Value = Estudiante.propCarnet;
-            command.Parameters.Add("@IDDireccion", ) =;
-           
+            command.Parameters.Add("@Nombre", SqlDbType.VarChar, 30).Value = Estudiante.propNombre;
+            command.Parameters.Add("@Apellido1", SqlDbType.Int).Value = Estudiante.propApellido1;
+            command.Parameters.Add("@Apellido2", SqlDbType.VarChar,30).Value = Estudiante.propApellido2;
+            command.Parameters.Add("@FechaNaci", SqlDbType.VarChar, 20).Value = Estudiante.propFechaNac;
+            command.Parameters.Add("@Edad", SqlDbType.Int).Value = Estudiante.propEdad;
+            command.Parameters.Add("@Id_Persona", SqlDbType.Int).Value = Estudiante.propCedula;
+            command.Parameters.Add("@IDCarrera", SqlDbType.Int).Value = Estudiante.propIDcarrera;
 
-            //return new Controladora().ejecutar(command);
+            return new Adaptador.clsConexion().ejecutar(command);
         }
+
+
 
         //public DataTable buscarRerva ()
         //{
