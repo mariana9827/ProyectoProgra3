@@ -26,13 +26,12 @@ namespace ProyectoProgra3.ControladoraBD
             return new Adaptador.clsConexion().ejecutar(command);
         }
 
-
-
-        //public DataTable buscarRerva ()
-        //{
-        //    SqlCommand command = new SqlCommand("SELECT tipo_reserva as [Tipo de reserva], fecha_reserva as Fecha, nombre_cliente as Cliente, cedula_cliente as Cedula FROM reserva WHERE num_reserva = 1");
-        //    return new Controladora().ejecutarSelect(command);
-        //}
+        
+        public DataTable verCarrerasControladoraBD()
+        {
+            SqlCommand command = new SqlCommand("SELECT IDCarrera,Descripcion FROM dbo.Carrera");
+            return new Adaptador.clsConexion().ejecutarSelect(command);
+        }
 
 
         //public DataTable verReservas ()

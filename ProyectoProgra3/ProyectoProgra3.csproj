@@ -65,6 +65,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CapaVista\Default.aspx" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -80,7 +81,15 @@
   <ItemGroup>
     <Compile Include="Adaptador\clsConexion.cs" />
     <Compile Include="CapaEntidad\clsEstudiante.cs" />
+    <Compile Include="CapaVista\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaVista\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ControladoraBD\clsEstudiante.cs" />
+    <Compile Include="Controladora\clsEstudiante.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -88,8 +97,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="CapaVista\" />
-    <Folder Include="Controladora\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

@@ -10,7 +10,7 @@ namespace ProyectoProgra3.Adaptador
     public class clsConexion
     {
 
-        private SqlConnection oCN = new SqlConnection("Data Source=DESKTOP-JJF4ANO\\SQLEXPRESS; Initial Catalog=ProyectoProgra3; Integrated Security=True"");
+        private SqlConnection oCN = new SqlConnection("Data Source=DESKTOP-JJF4ANO\\SQLEXPRESS; Initial Catalog=ProyectoProgra3; Integrated Security=True");
             public bool abrirConexion ()
             {
                 try
